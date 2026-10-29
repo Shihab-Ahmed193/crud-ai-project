@@ -1,0 +1,18 @@
+[
+  {
+    "id": "sample-1",
+    "title": "Set up project kickoff",
+    "description": "Create the initial task layout and define the MVP scope for the app.",
+    "status": "in-progress",
+    "priority": "high",
+    "createdAt": "2026-10-29T00:00:00.000Z"
+  },
+  {
+    "id": "sample-2",
+    "title": "Review AI suggestion workflow",
+    "description": "Make sure the AI guidance panel is connected to task analysis and recommendations.",
+    "status": "todo",
+    "priority": "medium",
+    "createdAt": "2026-10-29T00:10:00.000Z"
+  }
+]

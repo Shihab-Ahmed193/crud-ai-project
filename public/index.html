@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Smart CRUD Dashboard</title>
+    <link rel="stylesheet" href="/styles.css" />
+  </head>
+  <body>
+    <div class="container">
+      <header class="header">
+        <div>
+          <p class="eyebrow">AI Workflow</p>
+          <h1>Smart CRUD Dashboard</h1>
+        </div>
+        <button id="refreshBtn" class="secondary-btn">Refresh</button>
+      </header>
+
+      <main class="layout">
+        <section class="panel form-panel">
+          <h2>Add / Edit Task</h2>
+          <form id="taskForm">
+            <input type="hidden" id="taskId" />
+
+            <label>
+              Title
+              <input id="title" name="title" type="text" placeholder="Enter task title" required />
+            </label>
+
+            <label>
+              Description
+              <textarea id="description" name="description" rows="4" placeholder="Brief description"></textarea>
+            </label>
+
+            <label>
+              Status
+              <select id="status" name="status">
+                <option value="todo">To do</option>
+                <option value="in-progress">In progress</option>
+                <option value="done">Done</option>
+              </select>
+            </label>
+
+            <div class="button-row">
+              <button type="submit" class="primary-btn">Save Task</button>
+              <button type="button" id="resetBtn" class="ghost-btn">Clear</button>
+            </div>
+          </form>
+        </section>
+
+        <section class="panel ai-panel">
+          <h2>AI Recommendations</h2>
+          <div class="ai-input-row">
+            <input id="aiTitle" type="text" placeholder="Task title for AI advice" />
+            <button id="aiBtn" class="primary-btn">Get Advice</button>
+          </div>
+
+          <textarea id="aiContext" rows="5" placeholder="Add extra context or requirements here..."></textarea>
+
+          <div id="aiResult" class="ai-result empty">
+            AI suggestions will appear here.
+          </div>
+        </section>
+      </main>
+
+      <section class="panel task-panel">
+        <div class="task-header">
+          <h2>Tasks</h2>
+          <span id="taskCount" class="badge">0</span>
+        </div>
+
+        <div id="taskList" class="task-list"></div>
+      </section>
+    </div>
+
+    <script src="/app.js"></script>
+  </body>
+</html>
